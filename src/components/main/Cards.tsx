@@ -15,7 +15,7 @@ function Cards({ id, title, description, price, img }: CardProps) {
   const discountedPrice = price - parseFloat((price * 0.1).toFixed(2));
 
   return (
-    <div className="w-1/5 h-[350px] flex flex-col justify-center rounded-2xl p-2 shadow-2xl bg-white xs:w-[240px] xs:h-[250px]">
+    <div className="w-1/5 h-[350px] flex flex-col justify-center rounded-2xl p-2 shadow-2xl bg-white xs:w-[240px] xs:h-[250px] ipad:w-[200px]">
       {/* Img Div */}
       <div className="w-full  h-3/6 flex justify-center">
           <img src={img} alt="Image here" className="w-11/12  object-contain hover:scale-105 overflow-hidden" />

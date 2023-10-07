@@ -27,22 +27,22 @@ function Cart() {
 
               {cartItem.length === 0 ? <CartEmptyScreen/> :                 
                 <div className="w-full flex flex-wrap h-[200px] mt-10">
-                <div className=" w-[50%] flex justify-center xs:justify-start">
-                    <div className="w-[50%] xs:w-full">
-                      <h1 className="text-xl xs:text-base">Add Order Note</h1>
-                      <textarea id="message" rows={4} className="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 xs:w-11/12" placeholder="Your message..."></textarea>
+                <div className=" w-[50%] flex justify-center xs:justify-start ipad:justify-start">
+                    <div className="w-[50%] xs:w-full ipad:w-full">
+                      <h1 className="text-xl xs:text-base ipad:text-lg">Add Order Note</h1>
+                      <textarea id="message" rows={4} className="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 xs:w-11/12 ipad:w-11/12" placeholder="Your message..."></textarea>
                     </div>
                 </div>
                 <div className="w-[50%] flex flex-col items-end">
-                    <h1 className="font-bold text-2xl xs:text-base xs:flex xs:justify-end ">
+                    <h1 className="font-bold text-2xl xs:text-base xs:flex xs:justify-end ipad:flex ipad:justify-end ipad:text-lg">
                      Subtotal  : ${cartItem.reduce((total, cartItem) =>{
                         const item = storeItems.find(i => i.id === cartItem.id)
                         const discountedPrice = (item?.price || 0 ) - parseFloat(((item?.price || 0 ) * 0.1).toFixed(2));
                         return parseFloat((total + discountedPrice * cartItem.qty).toFixed(3));
                       }, 0)}
                      </h1>
-                    <h2 className="text-gray-600 py-2 xs:text-[10px]">*Tax and Shipping is included</h2>
-                    <Link to="/order-placed" className="bg-red-600 p-5 font-bold rounded-3xl text-white w-[40%] text-lg hover:bg-red-700 scale-105 shadow-2xl border border-red-900 xs:py-3 xs:text-base xs:w-11/12"><button className="text-center w-full">Place Order</button></Link>
+                    <h2 className="text-gray-600 py-2 xs:text-[10px] ipad:text-sm">*Tax and Shipping is included</h2>
+                    <Link to="/order-placed" className="bg-red-600 p-5 font-bold rounded-3xl text-white w-[40%] text-lg hover:bg-red-700 scale-105 shadow-2xl border border-red-900 xs:py-3 xs:text-base xs:w-11/12 ipad:w-11/12 ipad:py-3"><button className="text-center w-full">Place Order</button></Link>
                 </div>
                 <div className=" w-[50%] flex justify-center xs:justify-start xs:flex-col">
                     <div className="w-[50%] flex items-center gap-4 xs:gap-2">

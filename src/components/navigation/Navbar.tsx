@@ -25,15 +25,16 @@ const Navbar = () => {
     };
   }, []);
   return (<>
-    <div className="w-full bg-zinc-800 flex justify-center xs:justify-evenly xs:text-xs">
+    <div className="w-full bg-zinc-800 flex justify-center xs:justify-evenly xs:text-xs ipad:justify-evenly ipad:text-base">
     <NavTopBar />
     </div>
     <div className="w-full bg-stone-900 h-20 flex justify-center items-center" ref={navRef}>
-    <div className="w-9/12 flex items-center justify-between xs:w-full ">
+    <div className="w-9/12 flex items-center justify-between xs:w-full ipad:w-full">
       <div className="text-white">
-            <h1 className="text-3xl select-none xs:text-md xs:ml-2">Shop<span className="text-red-400">er</span></h1>
+            <h1 className="text-3xl select-none xs:text-md xs:ml-2 ipad:ml-2">Shop<span className="text-red-400">er</span></h1>
           </div>
-          <div className="text-white flex w-5/12 text-2xl justify-between items-center cursor-pointer select-none xs:w-max xs:text-sm xs:gap-4 xs:mr-5">
+          <div className="text-white flex w-5/12 text-2xl justify-between items-center cursor-pointer select-none xs:w-max xs:text-sm xs:gap-4 xs:mr-5
+          ipad:text-base ipad:mr-8">
             <Link to="/" >Home</Link>
             <Link to="/shop" >Shop</Link>
            <Link to="/cart">

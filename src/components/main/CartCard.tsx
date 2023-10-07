@@ -21,25 +21,25 @@ function CartCard( {id, qty}:CartItemProps) {
     {/* Product Image and Title */}
     <div className="w-[40%] flex items-center">
         <img src={item.image} alt="Product Image"  className="w-[50px] rounded-sm border border-red-100"/>
-        <div className="ml-5 text-xl leading-10 xs:ml-1">
-        <h2 className="xs:hidden">{item.title}</h2>
-        <button onClick={()=> removeItem(id) }className="hover:text-red-400 cursor-pointer flex items-center gap-4 xs:text-sm xs:gap-0 xs:flex-col">Remove Item: <FaTrashAlt/></button>
+        <div className="ml-5 text-xl leading-10 xs:ml-1 ipad:ml-2">
+        <h2 className="xs:hidden ipad:hidden">{item.title}</h2>
+        <button onClick={()=> removeItem(id) }className="hover:text-red-400 cursor-pointer flex items-center gap-4 xs:text-sm xs:gap-0 xs:flex-col ipad:flex-col ipad:gap-0 ipad:text-base">Remove Item: <FaTrashAlt/></button>
         </div>
     </div>
 
     {/* Product Price */}
     <div className="w-[20%] text-center ">
-        <h1 className="text-2xl xs:text-sm xs:font-bold">${discountedPrice}</h1>
+        <h1 className="text-2xl xs:text-sm xs:font-bold ipad:text-lg ipad:font-bold">${discountedPrice}</h1>
     </div>
 
     {/* Product Quantity */}
     <div className="w-[20%] text-center ">
-        <h1 className="text-2xl xs:text-sm xs:font-bold">x{qty}</h1>
+        <h1 className="text-2xl xs:text-sm xs:font-bold ipad:text-lg ipad:font-bold">x{qty}</h1>
     </div>
 
     {/* Product Total */}
     <div className="w-[20%] text-end ">
-        <h1 className="text-2xl xs:text-sm xs:font-bold">${(discountedPrice * qty).toFixed(2)}</h1>
+        <h1 className="text-2xl xs:text-sm xs:font-bold ipad:text-lg ipad:font-bold">${(discountedPrice * qty).toFixed(2)}</h1>
     </div>
 
 

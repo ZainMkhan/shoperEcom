@@ -60,15 +60,15 @@ const Landing = () => {
 
   return (
     <div className="w-5/6 h-4/6 mt-5 relative group select-none">
-      <div style={{backgroundImage: `url(${heroImg[currentIndex].url})`}} className="w-full h-full rounded-2xl bg-center bg-cover transform ease-in-out duration-200 shadow-xl">
+      <div style={{backgroundImage: `url(${heroImg[currentIndex].url})`}} className="w-full h-full rounded-2xl bg-center bg-cover transform ease-in-out duration-200 shadow-xl ipad:flex ipad:justify-center ipad:items-center ipad:flex-col">
 
-        <div className="absolute bg-white top-[30%] left-[5%] w-[30%] py-3 px-5 rounded-xl bg-transparent  text-red-400  border-red-400 border-2 xs:hidden">
-        <h2 className="text-5xl">End of Season</h2>
-        <h1 className="text-7xl">Sale!</h1>
+        <div className="absolute bg-white top-[30%] left-[5%] w-[30%] py-3 px-5 rounded-xl bg-transparent  text-red-400  border-red-400 border-2 xs:hidden ipad:w-[60%] ipad:flex ipad:static ipad:h-max ipad:gap-4 ipad:items-center">
+        <h2 className="text-5xl ipad:text-black ipad:text-3xl">End of Season</h2>
+        <h1 className="text-7xl ipad:text-5xl">Sale!</h1>
         </div>
 
         <div className="absolute bg-red-400  top-[47%] left-[21%] py-3 px-5 rounded-xl border-2
-         text-white shadow-1xl hover:bg-yellow-500 hover:shadow-4xl xs:relative xs:left-[25%] xs:w-[150px] xs:text-center">
+         text-white shadow-1xl hover:bg-yellow-500 hover:shadow-4xl xs:relative xs:left-[25%] xs:w-[150px] xs:text-center ipad:static ipad:mt-10 ipad:w-[30%] ipad:text-center ipad:text-xl ipad:p-3">
           <Link to="/shop">
             Shop now!
           </Link>

@@ -7,9 +7,19 @@ export default {
   theme: {
     extend: {},
     screens: {
-      'xs' : {'max': '376px'},
-      'xr' : {'max' : '414px'}
+      'xs' : {
+        'min': '270px',
+        'max': '450px'
+      },
+
+      'ipad' : {
+      'min' : '450px',
+      'max' : '850px'
     }
+
+    }
+
+
   },
   plugins: [],
 }
